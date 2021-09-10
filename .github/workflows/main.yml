@@ -40,6 +40,7 @@ jobs:
         wget --no-check-certificate https://github.com/$GITHUB_REPOSITORY/raw/main/requirements.txt
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install chardet
 
     - name: Random sleep
       if: github.event_name == 'schedule'
